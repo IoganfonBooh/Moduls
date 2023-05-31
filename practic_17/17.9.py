@@ -1,8 +1,5 @@
-#
-#
-set_of_numbers = input('Введите несколько целых чисел через пробел: ')
-# number = int(input('Введите одно целое число: '))
 
+set_of_numbers = input('Введите несколько целых чисел через пробел: ')
 
 def isint(str):
     str = str.replace(' ', '')
@@ -17,14 +14,12 @@ if " " not in set_of_numbers:
     print("\nБудьте внимательны, вводите числа через пробел)")
     set_of_numbers = input('Введите несколько целых чисел: ')
 if not isint(set_of_numbers):
-    print('\nВ ВВОДЕ СОДЕРЖАТСЯ НЕ ЦИФРЫ ЛИБО НЕ ЦЕЛЫЕ ЧИСЛА (введите ЧИСЛА, согласно условиям ввода.)\n')
-    # set_of_numbers = input('Введите ЦЕЛЫЕ числа через пробел: ')
+    print('\nВводите только целые числа\n')
 else:
     set_of_numbers = set_of_numbers.split()
     number = int(input('Введите одно целое число: '))
 sum_result = [int(item) for item in set_of_numbers]
 
-# Сортируем список
 
 def merge_sort(L):
     if len(L) < 2:
