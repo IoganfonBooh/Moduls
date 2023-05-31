@@ -82,19 +82,19 @@ if not binary_search(sum_result, number, 0, len(sum_result)):
     max_ind = ind + 1
     min_ind = ind - 1
     if rI < number:
-        print(f'''В списке нет введенного элемента
-Ближайший меньший элемент: {rI}, его индекс: {ind}
-Ближайший больший элемент: {sum_result[max_ind]} его индекс: {max_ind}''')
+        print(f'''В списке нет number
+Ближайший < элемент: {rI}, его индекс: {ind}
+Ближайший > элемент: {sum_result[max_ind]} его индекс: {max_ind}''')
     elif min_ind < 0:
-        print(f'''В списке нет введенного элемента
-Ближайший больший элемент: {rI}, его индекс: {sum_result.index(rI)}
-В списке нет меньшего элемента''')
+        print(f'''В списке нет number
+Ближайший > элемент: {rI}, его индекс: {sum_result.index(rI)}
+В списке нет < элемента''')
     elif rI > number:
-        print(f'''В списке нет введенного элемента
-Ближайший больший элемент: {rI}, его индекс: {sum_result.index(rI)}
-Ближайший меньший элемент: {sum_result[min_ind]} его индекс: {min_ind}''')
+        print(f'''В списке нет number
+Ближайший > элемент: {rI}, его индекс: {sum_result.index(rI)}
+Ближайший < элемент: {sum_result[min_ind]} его индекс: {min_ind}''')
     elif sum_result.index(rI) == 0:
-        print(f'Индекс введенного элемента: {sum_result.index(rI)}')
+        print(f'Индекс number: {sum_result.index(rI)}')
 else:
-    print(f'Индекс введенного элемента: {binary_search(sum_result, number, 0, len(sum_result))}')
+    print(f'Индекс number: {binary_search(sum_result, number, 0, len(sum_result))}')
 
