@@ -7,7 +7,7 @@ from config import keys, TOKEN
 bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands = ["start"])
-def help(message: telebot.types.Message):
+def start_(message: telebot.types.Message):
     text= 'Доброго времени суток! Я телебот Васька, готов помочь вам в конвертации валюты!\nЧто бы начать работу, ' \
           'введите команду в следующем формате :\n<имя валюты>\n<в ' \
           'какую ' \
@@ -17,7 +17,7 @@ def help(message: telebot.types.Message):
 
 
 @bot.message_handler(commands = ["help"])
-def help(message: telebot.types.Message):
+def help_(message: telebot.types.Message):
     text= 'Не волнуйтесь, все очень просто:\n<имя валюты>\n<в какую валюту перевести> ' \
           '\n<количество переводимой валюты> \nУвидеть список доступных валют: "/values"'
     bot.reply_to(message, text)
