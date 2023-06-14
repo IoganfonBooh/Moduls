@@ -20,7 +20,7 @@ def values(message: telebot.types.Message):
         text = "\n".join((text, key))
     bot.reply_to(message, text)
 
-@bot.message_handler(content_types = ["text", ])
+@bot.message_handler(content_types = ["text"])
 def convert(message: telebot.types.Message):
     try:
         values = message.text.split(' ')
@@ -33,7 +33,7 @@ def convert(message: telebot.types.Message):
     except Exception as e:
         bot.reply_to(message, f"Не удалось обработать команду\n{e}")
     else:
-        text = f'Цена {amount} {quote}ов  - {total_base} {base}ов'
+        text = f'Цена {amount} {quote}ов - {total_base} {base}ов'
         bot.send_message(message.chat.id, text)
 
 
